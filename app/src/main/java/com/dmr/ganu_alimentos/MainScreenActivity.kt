@@ -2,9 +2,13 @@ package com.dmr.ganu_alimentos
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
+import androidx.core.view.GravityCompat
 import androidx.recyclerview.widget.GridLayoutManager
 import com.dmr.ganu_alimentos.model.Product
+import kotlinx.android.synthetic.main.activity_main_screen.*
 import kotlinx.android.synthetic.main.content_main.*
+import kotlinx.android.synthetic.main.fragment_products.*
 import kotlinx.android.synthetic.main.main.*
 
 class MainScreenActivity : AppCompatActivity() {
@@ -14,15 +18,45 @@ class MainScreenActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main_screen)
         setSupportActionBar(toolbar)
 
-        val products = arrayListOf<Product>()
+        // Set initial Fragment
+        supportFragmentManager.beginTransaction().replace(R.id.frameLayout, HomeFragment()).commit()
 
-        for(i in 0..100){
-            products.add(Product("Product $i", "https://via.placeholder.com/350/dddddd/000000", 1.99))
+        nav_view.setNavigationItemSelectedListener {
+            it.isChecked = true
+            drawer_layout.closeDrawers()
+
+            when(it.itemId){
+                R.id.actionHome -> {
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.frameLayout, HomeFragment())
+                        .commit()
+                }
+                R.id.actionProducts -> {
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.frameLayout, ProductsFragment())
+                        .commit()
+                }
+                // Example to navigate to other Fragment with the menu
+                /*
+                R.id.<id from an item in res/menu/menu_main> -> {
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.frameLayout, <FragmentClassName>())
+                        .commit()
+                }
+                 */
+            }
+
+            true
         }
 
-        recycler_view.apply {
-            layoutManager = GridLayoutManager(this@MainScreenActivity, 2)
-            adapter = ProductsAdapter(products)
+        supportActionBar?.apply {
+            setDisplayHomeAsUpEnabled(true)
+            setHomeAsUpIndicator(R.drawable.ic_menu_white_24dp)
         }
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        drawer_layout.openDrawer(GravityCompat.START)
+        return true
     }
 }
