@@ -2,6 +2,8 @@ package com.dmr.ganu_alimentos
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.PersistableBundle
+import android.util.Log
 import android.view.MenuItem
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
@@ -15,38 +17,21 @@ import kotlinx.android.synthetic.main.main.*
 
 class MainScreenActivity : AppCompatActivity() {
 
+    private var currentFragment:Int = R.id.actionHome
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_screen)
         setSupportActionBar(toolbar)
 
         // Set initial Fragment
-        supportFragmentManager.beginTransaction().replace(R.id.frameLayout, HomeFragment()).commit()
+        changeFragment(currentFragment)
 
         nav_view.setNavigationItemSelectedListener {
             it.isChecked = true
             drawer_layout.closeDrawers()
 
-            when(it.itemId){
-                // Example to navigate to other Fragment with the menu
-                /*
-                R.id.<id from an item in res/menu/menu_main> -> {
-                    supportFragmentManager.beginTransaction()
-                        .replace(R.id.frameLayout, <FragmentClassName>())
-                        .commit()
-                }
-                 */
-                R.id.actionHome -> {
-                    supportFragmentManager.beginTransaction()
-                        .replace(R.id.frameLayout, HomeFragment())
-                        .commit()
-                }
-                R.id.actionProducts -> {
-                    supportFragmentManager.beginTransaction()
-                        .replace(R.id.frameLayout, ProductsFragment())
-                        .commit()
-                }
-            }
+            changeFragment(it.itemId)
 
             true
         }
@@ -60,5 +45,50 @@ class MainScreenActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         drawer_layout.openDrawer(GravityCompat.START)
         return true
+    }
+
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+
+        outState.putInt("CurrentFragment", currentFragment)
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        currentFragment = savedInstanceState.getInt("CurrentFragment")
+        //var newCurrentFragment = savedInstanceState.getInt("CurrentFragment")
+        changeFragment(currentFragment)
+    }
+
+
+
+    fun changeFragment(itemId:Int){
+        when(itemId){
+            // Example to navigate to other Fragment with the menu
+            /*
+            R.id.<id from an item in res/menu/menu_main> -> {
+                supportFragmentManager.beginTransaction()
+                    .replace(R.id.frameLayout, <FragmentClassName>())
+                    .commit()
+
+                currentFragment = R.id.<actionName>
+            }
+             */
+            R.id.actionHome -> {
+                supportFragmentManager.beginTransaction()
+                    .replace(R.id.frameLayout, HomeFragment())
+                    .commit()
+                currentFragment = R.id.actionHome
+            }
+            R.id.actionProducts -> {
+                supportFragmentManager.beginTransaction()
+                    .replace(R.id.frameLayout, ProductsFragment())
+                    .commit()
+                currentFragment = R.id.actionProducts
+            }
+        }
+
+        Log.d("Current fragment", currentFragment.toString())
     }
 }
