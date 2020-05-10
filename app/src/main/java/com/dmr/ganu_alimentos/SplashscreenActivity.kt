@@ -15,7 +15,7 @@ class SplashscreenActivity : AppCompatActivity() {
         Handler().postDelayed(
             {
                 startActivity(
-                    Intent(this, loginActivity::class.java)
+                    Intent(this, LoginActivity::class.java)
                 )
             },TIME)
     }

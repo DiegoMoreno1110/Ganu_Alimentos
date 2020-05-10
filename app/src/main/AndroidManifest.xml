@@ -17,10 +17,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter></activity>
         <activity android:name=".SigninActivity" />
-        <activity android:name=".loginActivity" />
+        <activity android:name=".LoginActivity" />
         <activity android:name=".SplashscreenActivity">
         </activity>
-        <activity android:name=".ProductDetails"/>
+        <activity android:name=".ProductDetails" android:parentActivityName=".MainScreenActivity"/>
     </application>
 
 </manifest>

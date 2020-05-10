@@ -21,9 +21,10 @@ class ProductsFragment : Fragment() {
 
         val products = arrayListOf<Product>()
 
-        for(i in 0..100){
-            products.add(Product("Product $i", "https://via.placeholder.com/350/dddddd/000000", 1.99))
-        }
+        //Hardcoding the products, in the future this data will be fetched from a JSON
+        products.add(Product("Ganu Sabor Carne de Res (caja con 20 piezas)", "https://i.ibb.co/ftntGsL/ganu-prod-image-1-min.jpg", 499.00))
+        products.add(Product("Ganu Sabor Carne de Res (caja con 45 piezas)", "https://i.ibb.co/ftntGsL/ganu-prod-image-1-min.jpg", 1125.00))
+
 
         root.recycler_view.apply {
             layoutManager = GridLayoutManager(activity, 2)

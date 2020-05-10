@@ -5,25 +5,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainScreenActivity">
-
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@color/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
-
-    </com.google.android.material.appbar.AppBarLayout>
-
+    tools:context=".MainScreenActivity"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_main_screen">
 
     <include
-        layout="@layout/content_main"
+        layout="@layout/app_bar"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"/>
+
+    <include
+        layout="@layout/main_content"
         android:layout_marginTop="55dp"
         android:layout_height="match_parent"
         android:layout_width="match_parent"/>

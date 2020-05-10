@@ -15,7 +15,13 @@ import kotlinx.android.synthetic.main.product_row.view.*
 class ProductsAdapter(private val products: ArrayList<Product>): RecyclerView.Adapter<ProductsAdapter.ViewHolder >(){
     override fun onBindViewHolder(holder: ProductsAdapter.ViewHolder, position: Int) {
         val product = products[position]
-        Picasso.get().load(product.photoUrl).into(holder.image)
+        Picasso
+            .get()
+            .load(product.photoUrl)
+            .error(R.drawable.ic_error_orange_24dp)
+            .placeholder(R.drawable.progress_animation)
+            .into(holder.image)
+
         holder.title.text = product.title
         val priceWithSymbol = "$" + product.price.toString() + " MXN"
         holder.price.text =  priceWithSymbol
@@ -27,6 +33,7 @@ class ProductsAdapter(private val products: ArrayList<Product>): RecyclerView.Ad
         view.setOnClickListener {
             val intent = Intent(parent.context, ProductDetails::class.java)
             intent.putExtra("title", products[holder.adapterPosition].title)
+            intent.putExtra("photo_url", products[holder.adapterPosition].photoUrl)
             parent.context.startActivity(intent)
         }
 

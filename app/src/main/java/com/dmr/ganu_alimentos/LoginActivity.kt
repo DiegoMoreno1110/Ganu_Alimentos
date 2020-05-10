@@ -3,7 +3,7 @@ package com.dmr.ganu_alimentos
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class loginActivity : AppCompatActivity() {
+class LoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
