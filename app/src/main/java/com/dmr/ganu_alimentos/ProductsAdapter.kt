@@ -26,7 +26,7 @@ class ProductsAdapter(private val products: ArrayList<Product>): RecyclerView.Ad
         val priceWithSymbol = "$" + product.price.toString() + " MXN"
         holder.price.text =  priceWithSymbol
 
-        if(product.sale) holder.saleIcon.visibility = View.VISIBLE
+        if(product.sale!!) holder.saleIcon.visibility = View.VISIBLE
         else holder.saleIcon.visibility = View.GONE
     }
 

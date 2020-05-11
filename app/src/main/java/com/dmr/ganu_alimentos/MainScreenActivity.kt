@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.util.Log
+import android.view.Menu
 import android.view.MenuItem
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
@@ -43,6 +44,9 @@ class MainScreenActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if(item?.itemId == R.id.actionCart){
+            return true
+        }
         drawer_layout.openDrawer(GravityCompat.START)
         return true
     }
@@ -90,5 +94,10 @@ class MainScreenActivity : AppCompatActivity() {
         }
 
         Log.d("Current fragment", currentFragment.toString())
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_toolbar,menu)
+        return true
     }
 }
