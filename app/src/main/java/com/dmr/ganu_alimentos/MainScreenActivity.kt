@@ -1,5 +1,6 @@
 package com.dmr.ganu_alimentos
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.PersistableBundle
@@ -9,6 +10,7 @@ import android.view.MenuItem
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
+import com.dmr.ganu_alimentos.cart.CartActivity
 import com.dmr.ganu_alimentos.model.Product
 import kotlinx.android.synthetic.main.activity_main_screen.*
 import kotlinx.android.synthetic.main.app_bar.*
@@ -45,6 +47,7 @@ class MainScreenActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if(item?.itemId == R.id.actionCart){
+            startActivity(Intent(this,CartActivity::class.java))
             return true
         }
         drawer_layout.openDrawer(GravityCompat.START)
