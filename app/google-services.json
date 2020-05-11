@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "428606062605",
+    "firebase_url": "https://ganualimentos-be492.firebaseio.com",
+    "project_id": "ganualimentos-be492",
+    "storage_bucket": "ganualimentos-be492.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:428606062605:android:1dcc46bbf820f756f85544",
+        "android_client_info": {
+          "package_name": "com.dmr.ganu_alimentos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "428606062605-nbnqbuakd53g3ef4ciq53hpg0of11429.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dmr.ganu_alimentos",
+            "certificate_hash": "3a174dc72bfeacbbfcd962c423181ae082609cc9"
+          }
+        },
+        {
+          "client_id": "428606062605-51s0orf4e6mi1k0pp1sbf24te1v03sbu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxTVtpMuBdwkFT6LYaVO-VOZez9wdE8rc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "428606062605-51s0orf4e6mi1k0pp1sbf24te1v03sbu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
