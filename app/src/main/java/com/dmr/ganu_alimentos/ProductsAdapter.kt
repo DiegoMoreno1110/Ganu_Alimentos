@@ -25,6 +25,9 @@ class ProductsAdapter(private val products: ArrayList<Product>): RecyclerView.Ad
         holder.title.text = product.title
         val priceWithSymbol = "$" + product.price.toString() + " MXN"
         holder.price.text =  priceWithSymbol
+
+        if(product.sale) holder.saleIcon.visibility = View.VISIBLE
+        else holder.saleIcon.visibility = View.GONE
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -47,5 +50,6 @@ class ProductsAdapter(private val products: ArrayList<Product>): RecyclerView.Ad
         val image : ImageView = itemView.photo
         val title : TextView = itemView.title
         val price : TextView = itemView.price
+        val saleIcon : ImageView = itemView.saleImageView
     }
 }
