@@ -21,7 +21,7 @@
         <activity android:name=".SplashscreenActivity">
         </activity>
         <activity android:name=".ProductDetails" android:parentActivityName=".MainScreenActivity"/>
-        <activity android:name=".cart.CartActivity" />
+        <activity android:name=".cart.CartActivity" android:parentActivityName=".MainScreenActivity"/>
     </application>
 
 </manifest>
