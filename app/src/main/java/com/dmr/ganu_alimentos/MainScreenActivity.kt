@@ -92,11 +92,23 @@ class MainScreenActivity : AppCompatActivity() {
                     .commit()
                 currentFragment = R.id.actionProducts
             }
-            R.id.actionProducts -> {
+            R.id.actionProfile -> {
                 supportFragmentManager.beginTransaction()
-                    .replace(R.id.frameLayout, ProductsFragment())
+                    .replace(R.id.frameLayout, ProfileFragment())
                     .commit()
-                currentFragment = R.id.actionProducts
+                currentFragment = R.id.actionProfile
+            }
+            R.id.actionOrder -> {
+                supportFragmentManager.beginTransaction()
+                    .replace(R.id.frameLayout, OrderFragment())
+                    .commit()
+                currentFragment = R.id.actionOrder
+            }
+            R.id.actionChat -> {
+                supportFragmentManager.beginTransaction()
+                    .replace(R.id.frameLayout, ChatFragment())
+                    .commit()
+                currentFragment = R.id.actionChat
             }
         }
 

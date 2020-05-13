@@ -18,10 +18,28 @@
             android:title="@string/menu_products"
             app:showAsAction="never" />
         <item
-            android:id="@+id/actionCart"
+            android:id="@+id/actionProfile"
             android:orderInCategory="100"
             android:icon="@drawable/ic_home_white_24dp"
-            android:title="Carrito"
+            android:title="Mi Perfil"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/actionOrder"
+            android:orderInCategory="100"
+            android:icon="@drawable/ic_home_white_24dp"
+            android:title="Mis Pedidos"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/actionChat"
+            android:orderInCategory="100"
+            android:icon="@drawable/ic_home_white_24dp"
+            android:title="Chatbot"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/actionLogOut"
+            android:orderInCategory="100"
+            android:icon="@drawable/ic_home_white_24dp"
+            android:title="Cerrar Sesión"
             app:showAsAction="never" />
     </group>
 </menu>
