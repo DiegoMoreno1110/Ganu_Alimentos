@@ -19,7 +19,7 @@ class SigninActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
 
         buttonSignIn.setOnClickListener{
-            //signUpUser()
+            signUpUser()
         }
     }
 
@@ -35,7 +35,7 @@ class SigninActivity : AppCompatActivity() {
             return
         }
         if(passwordSignIn.text.toString().isEmpty()){
-            passwordSignIn.error = "Please enter email"
+            passwordSignIn.error = "Please enter password"
             passwordSignIn.requestFocus()
             return
         }
@@ -46,7 +46,7 @@ class SigninActivity : AppCompatActivity() {
                     startActivity(Intent(this, LoginActivity::class.java))
                     finish()
                 } else {
-                    Toast.makeText(baseContext, "Signup failed.",
+                    Toast.makeText(baseContext, "Password must be at least 6 characters long.\nYou must use a valid email.",
                         Toast.LENGTH_SHORT).show()
                 }
 

@@ -34,6 +34,8 @@
             android:orderInCategory="100"
             android:icon="@drawable/ic_chat_black_24dp"
             android:title="Chatbot"
+            android:visible="false"
+            android:enabled="false"
             app:showAsAction="never" />
         <item
             android:id="@+id/actionLogOut"

@@ -25,7 +25,7 @@ class LoginActivity : AppCompatActivity() {
         }
 
         buttonLogIn.setOnClickListener{
-            //doLogin()
+            doLogin()
         }
 
     }
