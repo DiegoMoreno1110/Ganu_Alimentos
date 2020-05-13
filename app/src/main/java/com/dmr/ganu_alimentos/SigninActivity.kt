@@ -21,6 +21,11 @@ class SigninActivity : AppCompatActivity() {
         buttonSignIn.setOnClickListener{
             signUpUser()
         }
+
+        buttonLogInSignIn.setOnClickListener{
+            startActivity(Intent(this, LoginActivity::class.java ))
+            finish()
+        }
     }
 
     private fun signUpUser(){
