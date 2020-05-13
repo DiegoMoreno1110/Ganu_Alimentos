@@ -68,8 +68,6 @@ class MainScreenActivity : AppCompatActivity() {
         changeFragment(currentFragment)
     }
 
-
-
     fun changeFragment(itemId:Int){
         when(itemId){
             // Example to navigate to other Fragment with the menu
@@ -87,6 +85,12 @@ class MainScreenActivity : AppCompatActivity() {
                     .replace(R.id.frameLayout, HomeFragment())
                     .commit()
                 currentFragment = R.id.actionHome
+            }
+            R.id.actionProducts -> {
+                supportFragmentManager.beginTransaction()
+                    .replace(R.id.frameLayout, ProductsFragment())
+                    .commit()
+                currentFragment = R.id.actionProducts
             }
             R.id.actionProducts -> {
                 supportFragmentManager.beginTransaction()

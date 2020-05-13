@@ -8,7 +8,7 @@
     tools:context=".SigninActivity">
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/buttonSignIn"
         style="@android:style/Widget.Button"
         android:layout_width="281dp"
         android:layout_height="43dp"
@@ -23,7 +23,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/buttonLogInSignIn"
         style="@android:style/Widget.DeviceDefault.Button.Borderless"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -48,11 +48,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.298"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText9"
+        app:layout_constraintTop_toBottomOf="@+id/passwordSignIn"
         app:layout_constraintVertical_bias="0.237" />
 
     <EditText
-        android:id="@+id/editText9"
+        android:id="@+id/passwordSignIn"
         android:layout_width="321dp"
         android:layout_height="48dp"
         android:ems="10"
@@ -65,11 +65,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText6"
+        app:layout_constraintTop_toBottomOf="@+id/emailSignIn"
         app:layout_constraintVertical_bias="0.027" />
 
     <EditText
-        android:id="@+id/editText6"
+        android:id="@+id/emailSignIn"
         android:layout_width="321dp"
         android:layout_height="45dp"
         android:ems="10"
@@ -80,11 +80,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText4"
+        app:layout_constraintTop_toBottomOf="@+id/nombreSignIn"
         app:layout_constraintVertical_bias="0.028" />
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/nombreSignIn"
         android:layout_width="321dp"
         android:layout_height="45dp"
         android:ems="10"

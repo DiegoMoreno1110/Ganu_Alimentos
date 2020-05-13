@@ -17,5 +17,11 @@
             android:icon="@drawable/ic_monetization_on_black_24dp"
             android:title="@string/menu_products"
             app:showAsAction="never" />
+        <item
+            android:id="@+id/actionCart"
+            android:orderInCategory="100"
+            android:icon="@drawable/ic_home_white_24dp"
+            android:title="Carrito"
+            app:showAsAction="never" />
     </group>
 </menu>
