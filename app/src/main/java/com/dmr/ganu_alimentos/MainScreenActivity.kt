@@ -1,17 +1,21 @@
 package com.dmr.ganu_alimentos
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.PersistableBundle
+import android.util.AttributeSet
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import com.dmr.ganu_alimentos.cart.CartActivity
 import com.dmr.ganu_alimentos.model.Product
+import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_main_screen.*
 import kotlinx.android.synthetic.main.app_bar.*
 import kotlinx.android.synthetic.main.main_content.*
@@ -20,15 +24,20 @@ import kotlinx.android.synthetic.main.main.*
 
 class MainScreenActivity : AppCompatActivity() {
 
-    private var currentFragment:Int = R.id.actionHome
+    private var currentFragment:Int? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_screen)
         setSupportActionBar(toolbar)
 
+        Log.d("FRAGMENT CURRENT", currentFragment.toString())
         // Set initial Fragment
-        changeFragment(currentFragment)
+        if(currentFragment === null){
+            currentFragment = R.id.actionHome
+        }
+
+        changeFragment(currentFragment!!)
 
         nav_view.setNavigationItemSelectedListener {
             it.isChecked = true
@@ -42,6 +51,13 @@ class MainScreenActivity : AppCompatActivity() {
         supportActionBar?.apply {
             setDisplayHomeAsUpEnabled(true)
             setHomeAsUpIndicator(R.drawable.ic_menu_white_24dp)
+        }
+
+        fab.setOnClickListener {
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.frameLayout, ChatFragment())
+                .commit()
+            currentFragment = R.id.actionChat
         }
     }
 
@@ -58,28 +74,17 @@ class MainScreenActivity : AppCompatActivity() {
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
 
-        outState.putInt("CurrentFragment", currentFragment)
+        currentFragment?.let { outState.putInt("CurrentFragment", it) }
     }
 
     override fun onRestoreInstanceState(savedInstanceState: Bundle) {
         super.onRestoreInstanceState(savedInstanceState)
         currentFragment = savedInstanceState.getInt("CurrentFragment")
         //var newCurrentFragment = savedInstanceState.getInt("CurrentFragment")
-        changeFragment(currentFragment)
     }
 
     fun changeFragment(itemId:Int){
         when(itemId){
-            // Example to navigate to other Fragment with the menu
-            /*
-            R.id.<id from an item in res/menu/menu_main> -> {
-                supportFragmentManager.beginTransaction()
-                    .replace(R.id.frameLayout, <FragmentClassName>())
-                    .commit()
-
-                currentFragment = R.id.<actionName>
-            }
-             */
             R.id.actionHome -> {
                 supportFragmentManager.beginTransaction()
                     .replace(R.id.frameLayout, HomeFragment())
@@ -110,9 +115,12 @@ class MainScreenActivity : AppCompatActivity() {
                     .commit()
                 currentFragment = R.id.actionChat
             }
+            R.id.actionLogOut -> {
+                FirebaseAuth.getInstance().signOut();
+                startActivity(Intent(this, LoginActivity::class.java))
+                finish()
+            }
         }
-
-        Log.d("Current fragment", currentFragment.toString())
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

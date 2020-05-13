@@ -20,25 +20,27 @@
         <item
             android:id="@+id/actionProfile"
             android:orderInCategory="100"
-            android:icon="@drawable/ic_home_white_24dp"
+            android:icon="@drawable/ic_person_black_24dp"
             android:title="Mi Perfil"
             app:showAsAction="never" />
         <item
             android:id="@+id/actionOrder"
             android:orderInCategory="100"
-            android:icon="@drawable/ic_home_white_24dp"
+            android:icon="@drawable/ic_history_black_24dp"
             android:title="Mis Pedidos"
             app:showAsAction="never" />
         <item
             android:id="@+id/actionChat"
             android:orderInCategory="100"
-            android:icon="@drawable/ic_home_white_24dp"
+            android:icon="@drawable/ic_chat_black_24dp"
             android:title="Chatbot"
+            android:visible="false"
+            android:enabled="false"
             app:showAsAction="never" />
         <item
             android:id="@+id/actionLogOut"
             android:orderInCategory="100"
-            android:icon="@drawable/ic_home_white_24dp"
+            android:icon="@drawable/ic_chevron_left_black_24dp"
             android:title="Cerrar Sesión"
             app:showAsAction="never" />
     </group>
