@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:layout_gravity="bottom|end"
-        android:src="@drawable/ic_search_black_24dp"
+        android:src="@drawable/ic_chat_white_24dp"
         android:tint="#FFFFFF"
         android:backgroundTint="@color/colorPrimary"/>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
