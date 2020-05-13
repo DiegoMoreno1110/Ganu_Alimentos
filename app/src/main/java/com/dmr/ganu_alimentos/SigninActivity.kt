@@ -18,6 +18,12 @@ class SigninActivity : AppCompatActivity() {
 
         auth = FirebaseAuth.getInstance()
 
+        buttonLogInSignIn.setOnClickListener{
+            startActivity(Intent(this, LoginActivity::class.java ))
+            finish()
+
+        }
+
         buttonSignIn.setOnClickListener{
             signUpUser()
         }
