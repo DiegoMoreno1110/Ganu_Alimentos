@@ -29,5 +29,7 @@
         android:layout_gravity="bottom|end"
         android:src="@drawable/ic_chat_white_24dp"
         android:tint="#FFFFFF"
+        app:borderWidth="4dp"
+        app:backgroundTint="@color/white"
         android:backgroundTint="@color/colorPrimary"/>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
