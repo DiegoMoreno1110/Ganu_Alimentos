@@ -90,8 +90,8 @@
     <Button
         android:id="@+id/button3"
         style="@android:style/Widget.Button"
-        android:layout_width="143dp"
-        android:layout_height="36dp"
+        android:layout_width="127dp"
+        android:layout_height="34dp"
         android:background="#FE8204"
         android:text="Cancelar"
         android:textColor="#FFFFFF"
@@ -106,7 +106,7 @@
     <Button
         android:id="@+id/button4"
         style="@android:style/Widget.Button"
-        android:layout_width="162dp"
+        android:layout_width="132dp"
         android:layout_height="36dp"
         android:background="#FE8204"
         android:text="Volver a pedir"
