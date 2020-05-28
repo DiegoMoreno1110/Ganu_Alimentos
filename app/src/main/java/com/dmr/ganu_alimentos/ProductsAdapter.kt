@@ -37,6 +37,8 @@ class ProductsAdapter(private val products: ArrayList<Product>): RecyclerView.Ad
             val intent = Intent(parent.context, ProductDetails::class.java)
             intent.putExtra("title", products[holder.adapterPosition].title)
             intent.putExtra("photo_url", products[holder.adapterPosition].photoUrl)
+            intent.putExtra("price", products[holder.adapterPosition].price)
+
             parent.context.startActivity(intent)
         }
 
