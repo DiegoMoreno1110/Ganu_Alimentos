@@ -48,8 +48,6 @@ class ProductDetails: AppCompatActivity() {
             //product.price = price.toDouble()
             product.title = title
 
-            cart.addCartItem(cartItem)
-
 
             AlertDialog.Builder(this)
                 .setMessage("¿Añadir $title al carrito?")
