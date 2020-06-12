@@ -1,12 +1,9 @@
 package com.dmr.ganu_alimentos
-import android.content.Intent
 import android.graphics.BitmapFactory
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.github.bassaer.chatmessageview.model.ChatUser
 import com.github.bassaer.chatmessageview.model.Message
@@ -14,10 +11,7 @@ import com.github.bassaer.chatmessageview.view.ChatView
 import com.github.kittinunf.fuel.Fuel
 import com.github.kittinunf.fuel.android.extension.responseJson
 import com.github.kittinunf.fuel.core.FuelManager
-import kotlinx.android.synthetic.main.fragment_chat.*
 import kotlinx.android.synthetic.main.fragment_chat.view.*
-import java.lang.reflect.InvocationTargetException
-import java.util.*
 
 class ChatFragment: Fragment() {
     private lateinit var mChatView: ChatView
