@@ -53,14 +53,14 @@
 
         <TextView
             android:id="@+id/textView30"
-            android:padding="5dp"
             android:layout_width="303dp"
             android:layout_height="267dp"
             android:layout_marginTop="20dp"
-            android:background="@drawable/rounded_corner"
+            android:background="@drawable/rounded_button_v2"
+            android:padding="5dp"
             android:text="GANU ALIMENTOS es una empresa orgullosamente mexicana que busca proveer soluciones alimenticias a aquellas personas que disfrutan vivir un estilo de vida movido, saludable y moderno.\n\nS.A. de C.V."
             android:textAlignment="center"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="22sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -84,8 +84,8 @@
 
         <Button
             android:id="@+id/to_facebook"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
             android:layout_marginStart="76dp"
             android:layout_marginTop="24dp"
             android:background="@drawable/facebook"
@@ -94,14 +94,22 @@
 
         <Button
             android:id="@+id/to_twitter"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_marginStart="104dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="50dp"
             android:layout_marginTop="24dp"
             android:background="@drawable/twitter"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.131"
             app:layout_constraintStart_toEndOf="@+id/to_facebook"
+            app:layout_constraintTop_toBottomOf="@+id/textView31" />
+
+        <Button
+            android:id="@+id/to_web"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/www_logo"
+            app:layout_constraintStart_toEndOf="@+id/to_twitter"
             app:layout_constraintTop_toBottomOf="@+id/textView31" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

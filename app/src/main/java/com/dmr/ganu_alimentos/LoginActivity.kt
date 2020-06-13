@@ -1,6 +1,7 @@
 package com.dmr.ganu_alimentos
 
 import android.content.Intent
+import android.graphics.drawable.AnimationDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Patterns
@@ -8,6 +9,8 @@ import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import kotlinx.android.synthetic.main.activity_login.*
+import kotlinx.android.synthetic.main.activity_signin.*
+import kotlinx.android.synthetic.main.fragment_home.view.*
 
 class LoginActivity : AppCompatActivity() {
 
@@ -18,6 +21,12 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_login)
 
         auth = FirebaseAuth.getInstance()
+
+        val animDrawable = this.login_layout.background as AnimationDrawable
+        animDrawable.setEnterFadeDuration(10)
+        animDrawable.setExitFadeDuration(1500)
+        animDrawable.start()
+
 
         registerButtonLogIn.setOnClickListener{
             startActivity(Intent(this, SigninActivity::class.java ))
@@ -55,7 +64,7 @@ class LoginActivity : AppCompatActivity() {
                     val user = auth.currentUser
                     updateUI(user)
                 } else {
-                    Toast.makeText(baseContext, "Login failed.",
+                    Toast.makeText(baseContext, task.exception?.localizedMessage,
                         Toast.LENGTH_SHORT).show()
                     updateUI(null)
                 }

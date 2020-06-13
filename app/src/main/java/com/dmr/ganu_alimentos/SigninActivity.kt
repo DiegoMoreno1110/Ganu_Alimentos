@@ -1,6 +1,7 @@
 package com.dmr.ganu_alimentos
 
 import android.content.Intent
+import android.graphics.drawable.AnimationDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Patterns
@@ -15,6 +16,13 @@ class SigninActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signin)
+
+
+        val animDrawable = this.signin_layout.background as AnimationDrawable
+        animDrawable.setEnterFadeDuration(10)
+        animDrawable.setExitFadeDuration(1500)
+        animDrawable.start()
+
 
         auth = FirebaseAuth.getInstance()
 
@@ -57,7 +65,7 @@ class SigninActivity : AppCompatActivity() {
                     startActivity(Intent(this, LoginActivity::class.java))
                     finish()
                 } else {
-                    Toast.makeText(baseContext, "Password must be at least 6 characters long.\nYou must use a valid email.",
+                    Toast.makeText(baseContext, task.exception?.localizedMessage,
                         Toast.LENGTH_SHORT).show()
                 }
 

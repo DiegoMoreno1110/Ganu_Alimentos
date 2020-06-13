@@ -4,92 +4,101 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FE8204"
+    android:id="@+id/signin_layout"
+    android:background="@drawable/gradient_animation"
     tools:context=".SigninActivity">
 
     <Button
         android:id="@+id/buttonSignIn"
         style="@android:style/Widget.Button"
-        android:layout_width="281dp"
-        android:layout_height="43dp"
-        android:layout_marginTop="36dp"
-        android:background="#FFFFFF"
+        android:layout_width="321dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rounded_button_v2"
+        android:paddingHorizontal="5dp"
         android:text="Registrarse"
-        android:textColor="#FF5722"
+        android:textColor="@color/white"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintTop_toBottomOf="@+id/passwordSignIn" />
 
     <Button
         android:id="@+id/buttonLogInSignIn"
         style="@android:style/Widget.DeviceDefault.Button.Borderless"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:background="#FE8204"
+        android:layout_width="180dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/rounded_button_v1"
         android:text="Iniciar Sesión"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.28"
+        app:layout_constraintHorizontal_bias="0.302"
         app:layout_constraintStart_toEndOf="@+id/textView6"
-        app:layout_constraintTop_toBottomOf="@+id/passwordSignIn"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSignIn"
         tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView6"
-        android:layout_width="163dp"
-        android:layout_height="32dp"
-        android:layout_marginTop="48dp"
+        android:layout_width="146dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="32dp"
         android:text="¿Ya tienes cuenta?"
+        android:textAlignment="textEnd"
         android:textColor="#FFFFFF"
-        android:textSize="18sp"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.181"
+        app:layout_constraintHorizontal_bias="0.066"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwordSignIn" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonSignIn" />
 
     <EditText
         android:id="@+id/passwordSignIn"
+        android:paddingHorizontal="5dp"
         android:layout_width="321dp"
         android:layout_height="48dp"
         android:layout_marginTop="12dp"
+        android:background="@drawable/rounded_corner"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPersonName"
         android:password="true"
-        android:textColor="#FFFFFF"
-        android:textColorHint="#FFFFFF"
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="#FF5722"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emailSignIn" />
 
     <EditText
         android:id="@+id/emailSignIn"
+        android:paddingHorizontal="5dp"
         android:layout_width="321dp"
         android:layout_height="45dp"
         android:layout_marginTop="12dp"
+        android:background="@drawable/rounded_corner"
         android:ems="10"
         android:hint="E-mail"
         android:inputType="textPersonName"
-        android:textColor="#FFFFFF"
-        android:textColorHint="#FFFFFF"
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="#FF5722"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nombreSignIn" />
 
     <EditText
         android:id="@+id/nombreSignIn"
+        android:paddingHorizontal="5dp"
         android:layout_width="321dp"
         android:layout_height="45dp"
         android:layout_marginTop="20dp"
+        android:background="@drawable/rounded_corner"
         android:ems="10"
         android:hint="Nombre"
         android:inputType="textPersonName"
-        android:textColor="#FFFFFF"
-        android:textColorHint="#FFFFFF"
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="#FF5722"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
@@ -119,5 +128,5 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo_small" />
+        app:srcCompat="@drawable/logo_transparent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

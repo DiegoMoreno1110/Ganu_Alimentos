@@ -105,9 +105,9 @@
     <Button
         android:id="@+id/buttonModifyInfo"
         style="@android:style/Widget.Button"
-        android:layout_width="209dp"
-        android:layout_height="43dp"
-        android:background="#FE8204"
+        android:layout_width="331dp"
+        android:layout_height="52dp"
+        android:background="@drawable/rounded_button_v1"
         android:text="Modificar Información"
         android:textColor="#FFFFFF"
         android:textSize="18sp"

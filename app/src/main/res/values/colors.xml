@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#FE8204</color>
+    <color name="colorPrimaryFaded">#E9FF9326</color>
     <color name="colorPrimaryDark">#6E4100</color>
     <color name="colorAccent">#23A4BC</color>
     <color name="black">#000000</color>
     <color name="white">#FFFFFF</color>
+    <color name="darkBlue">#3F00D1</color>
+    <color name="darkBlueAccent">#30009F</color>
 
     <color name="transparentWhite">#D9FFFFFF</color>
     <color name="colorTransparent">#00ffffff</color>
 
     <color name="gradientStart">#FE8204</color>
     <color name="gradientMiddle">#fe6904</color>
-    <color name="gradientEnd">#feb904</color>
+    <color name="gradientEnd">#FE9A04</color>
 </resources>

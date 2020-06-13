@@ -23,6 +23,8 @@ class ModifyInfo: AppCompatActivity() {
         setContentView(R.layout.modify_info)
         setSupportActionBar(toolbar)
 
+        toolbar.setNavigationOnClickListener { finish() }
+
 
         var profileFireBase = ProfileFireBase()
         var payInformationFireBase = PayInformationFireBase()

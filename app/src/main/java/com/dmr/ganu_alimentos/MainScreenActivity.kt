@@ -93,6 +93,7 @@ class MainScreenActivity : AppCompatActivity() {
                     .replace(R.id.frameLayout, HomeFragment())
                     .commit()
                 currentFragment = R.id.actionHome
+
             }
             R.id.actionProducts -> {
                 supportFragmentManager.beginTransaction()

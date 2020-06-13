@@ -20,45 +20,44 @@
             tools:layout_editor_absoluteY="0dp" />
 
         <Button
-            android:id="@+id/button10"
+            android:id="@+id/moreCartItems"
             android:layout_width="53dp"
             android:layout_height="42dp"
-            android:layout_marginTop="52dp"
-            android:background="#FE8204"
-            android:text="-"
-            android:textColor="#FFFFFF"
-            android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.308"
-            app:layout_constraintStart_toEndOf="@+id/textView26"
-            app:layout_constraintTop_toBottomOf="@+id/textView28" />
-
-        <TextView
-            android:id="@+id/textView26"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="48dp"
-            android:layout_marginTop="52dp"
-            android:text="0"
-            android:textColor="#FF5722"
-            android:textSize="30sp"
-            app:layout_constraintRight_toLeftOf="@id/button10"
-            app:layout_constraintStart_toEndOf="@+id/button9"
-            app:layout_constraintTop_toBottomOf="@+id/textView28" />
-
-        <Button
-            android:id="@+id/button9"
-            android:layout_width="53dp"
-            android:layout_height="42dp"
-            android:layout_marginTop="52dp"
-            android:background="#FE8204"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/rounded_button_v1"
             android:text="+"
             android:textColor="#FFFFFF"
             android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.405"
+            app:layout_constraintStart_toEndOf="@+id/itemCounter"
+            app:layout_constraintTop_toBottomOf="@+id/textView27" />
+
+        <TextView
+            android:id="@+id/itemCounter"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="30dp"
+            android:textAlignment="center"
+            android:text="0"
+            android:textColor="#FF5722"
+            android:textSize="30sp"
+            app:layout_constraintRight_toLeftOf="@id/moreCartItems"
+            app:layout_constraintStart_toEndOf="@+id/lessCartItems"
+            app:layout_constraintTop_toBottomOf="@+id/textView27" />
+
+        <Button
+            android:id="@+id/lessCartItems"
+            android:layout_width="53dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/rounded_button_v1"
+            android:text="-"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView28" />
+            app:layout_constraintTop_toBottomOf="@+id/textView27" />
 
         <ImageView
             android:id="@+id/photo"
@@ -73,10 +72,11 @@
 
         <TextView
             android:id="@+id/product_name"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="28dp"
             android:paddingLeft="15dp"
+            android:height="65dp"
             android:text="Product Details"
             android:textColor="#FF5722"
             android:textSize="24sp"
@@ -90,43 +90,29 @@
             style="@android:style/Widget.Button"
             android:layout_width="234dp"
             android:layout_height="36dp"
-            android:layout_marginTop="32dp"
-            android:background="#FE8204"
-            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded_button_v2"
             android:text="Añadir al carrito"
             android:textColor="#FFFFFF"
             android:textSize="18sp"
-            app:layout_constraintHorizontal_bias="0.587"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button9" />
+            app:layout_constraintTop_toBottomOf="@+id/lessCartItems" />
 
         <TextView
             android:id="@+id/textView27"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:paddingLeft="15dp"
-            android:text="Descripción:"
-            android:textColor="#FF5722"
-            android:textSize="18sp"
+            android:text="¿Te gusta lo que ves? ¡Agregalo al carrito!"
+            android:textAlignment="center"
+            android:textColor="#616161"
+            android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.108"
+            app:layout_constraintHorizontal_bias="0.298"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/product_name" />
-
-        <TextView
-            android:id="@+id/textView28"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Aquí va la descripción"
-            android:paddingLeft="15dp"
-            android:textColor="#605D5C"
-            android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.143"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView27" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

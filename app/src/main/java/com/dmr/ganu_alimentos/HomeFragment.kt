@@ -26,7 +26,7 @@ class HomeFragment:Fragment(){
 
         val animDrawable = view.home_layout.background as AnimationDrawable
         animDrawable.setEnterFadeDuration(10)
-        animDrawable.setExitFadeDuration(5000)
+        animDrawable.setExitFadeDuration(1500)
         animDrawable.start()
 
 
@@ -37,6 +37,10 @@ class HomeFragment:Fragment(){
 
         view.to_twitter.setOnClickListener {
             context?.let { it1 -> goToURL(it1, "https://twitter.com/ganualimentos") }
+        }
+
+        view.to_web.setOnClickListener {
+            context?.let { it1 -> goToURL(it1, "https://www.ganu.com.mx/") }
         }
 
         return view
