@@ -1,54 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_height="match_parent"
+    android:id="@+id/home_layout"
+    android:background="@drawable/gradient_animation"
     android:layout_width="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:layout_height="match_parent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingBottom="50dp"
-        android:background="#FE8204">
+        android:paddingBottom="50dp">
 
         <TextView
             android:id="@+id/textView29"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/gradient_banner"
             android:padding="16dp"
-            android:text="¡Bienvenido al E-Shop de Ganú!"
+            android:text="¡Bienvenido al\nE-Shop de GANU!"
             android:textAlignment="center"
-            android:textColor="@color/white"
+            android:textColor="@color/colorPrimary"
             android:textSize="32sp"
-            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintHorizontal_bias="0.494"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/imageView7"
-            android:layout_width="317dp"
-            android:layout_height="134dp"
-            android:layout_marginTop="60dp"
+            android:layout_width="336dp"
+            android:layout_height="190dp"
+            android:contentDescription="@string/app_name"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.521"
+            app:layout_constraintHorizontal_bias="0.493"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView29"
-            app:srcCompat="@drawable/logo_small" />
+            app:srcCompat="@drawable/ganu_vase" />
+
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:text="GANU"
+            android:background="@drawable/gradient_banner"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="60sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView7" />
 
         <TextView
             android:id="@+id/textView30"
-            android:layout_width="298dp"
-            android:layout_height="346dp"
-            android:layout_marginTop="60dp"
-            android:text="GANU ALIMENTOS es una empresa orgullosamente mexicana que busca proveer soluciones alimenticias a aquellas personas que disfrutan vivir un estilo de vida movido, saludable y moderno.\n\n\nS.A. de C.V."
+            android:padding="5dp"
+            android:layout_width="303dp"
+            android:layout_height="267dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded_corner"
+            android:text="GANU ALIMENTOS es una empresa orgullosamente mexicana que busca proveer soluciones alimenticias a aquellas personas que disfrutan vivir un estilo de vida movido, saludable y moderno.\n\nS.A. de C.V."
             android:textAlignment="center"
-            android:textColor="#FFFFFF"
-            android:textSize="24sp"
+            android:textColor="@color/black"
+            android:textSize="22sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.495"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+            app:layout_constraintTop_toBottomOf="@+id/textViewTitle" />
+
+
+        <TextView
+            android:id="@+id/textView31"
+            android:layout_width="match_parent"
+            android:layout_height="91dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/gradient_banner"
+            android:text="¡Visítanos en nuestras redes sociales!"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="32sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView30" />
+
+        <Button
+            android:id="@+id/to_facebook"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="76dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/facebook"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView31" />
+
+        <Button
+            android:id="@+id/to_twitter"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="104dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/twitter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.131"
+            app:layout_constraintStart_toEndOf="@+id/to_facebook"
+            app:layout_constraintTop_toBottomOf="@+id/textView31" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

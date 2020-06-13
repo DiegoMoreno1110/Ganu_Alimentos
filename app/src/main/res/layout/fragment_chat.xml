@@ -9,7 +9,9 @@
     <com.github.bassaer.chatmessageview.view.ChatView
         android:id="@+id/chatView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:tooltipText="Escribe un mensaje"
+        />
 
 
 </FrameLayout>

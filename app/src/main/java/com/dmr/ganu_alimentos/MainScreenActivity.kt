@@ -2,6 +2,7 @@ package com.dmr.ganu_alimentos
 
 import android.content.Context
 import android.content.Intent
+import android.graphics.drawable.AnimationDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.PersistableBundle
@@ -58,6 +59,7 @@ class MainScreenActivity : AppCompatActivity() {
                 .replace(R.id.frameLayout, ChatFragment())
                 .commit()
             currentFragment = R.id.actionChat
+            fab.hide()
         }
     }
 
@@ -84,6 +86,7 @@ class MainScreenActivity : AppCompatActivity() {
     }
 
     fun changeFragment(itemId:Int){
+        fab.show()
         when(itemId){
             R.id.actionHome -> {
                 supportFragmentManager.beginTransaction()
