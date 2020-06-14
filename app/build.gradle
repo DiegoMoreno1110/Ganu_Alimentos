@@ -62,3 +62,5 @@ dependencies {
     implementation 'com.github.kittinunf.fuel:fuel:1.12.1'
     implementation 'com.github.kittinunf.fuel:fuel-android:1.12.1'
 }
+
+apply plugin: 'com.google.gms.google-services'
