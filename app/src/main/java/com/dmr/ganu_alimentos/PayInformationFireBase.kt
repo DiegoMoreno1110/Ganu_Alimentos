@@ -3,6 +3,7 @@ package com.dmr.ganu_alimentos
 import android.content.ContentValues
 import android.util.Log
 import com.dmr.ganu_alimentos.model.PayInfomation
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 
 class PayInformationFireBase {
@@ -15,7 +16,7 @@ class PayInformationFireBase {
     }
 
     fun addPayInformation(card: PayInfomation){
-        val key = database.child("card").push().key
+        val key = FirebaseAuth.getInstance().currentUser!!.uid
         card.id = key
         database.child("card").child(key!!).setValue(card)
 

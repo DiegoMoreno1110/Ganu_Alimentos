@@ -15,6 +15,7 @@ import kotlinx.android.synthetic.main.product_details.*
 
 class ProductDetails: AppCompatActivity() {
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.product_details)
@@ -64,9 +65,12 @@ class ProductDetails: AppCompatActivity() {
             cartItem.products = product
             cartItem.quantity = itemCounter.text.toString().toInt()
 
+
+
             product.photoUrl = photoUrl
             product.price = 1250.00
             product.title = title
+
 
 
             AlertDialog.Builder(this)

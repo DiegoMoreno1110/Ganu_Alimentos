@@ -75,7 +75,7 @@
 
             android:background="@drawable/rounded_button_v2"
             android:text="Modificar información personal"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.572"
             app:layout_constraintStart_toStartOf="parent"
@@ -89,7 +89,7 @@
             android:layout_marginTop="20dp"
             android:background="@drawable/rounded_button_v2"
             android:text="Modificar información de pago"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.572"
             app:layout_constraintStart_toStartOf="parent"

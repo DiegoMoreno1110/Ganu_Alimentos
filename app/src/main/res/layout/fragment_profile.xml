@@ -36,10 +36,9 @@
         app:layout_constraintVertical_bias="0.064" />
 
     <TextView
-        android:id="@+id/textView12"
+        android:id="@+id/addressUser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Calle A #69, Col B, Iztapalapa"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -59,14 +58,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.169"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView12"
+        app:layout_constraintTop_toBottomOf="@+id/addressUser"
         app:layout_constraintVertical_bias="0.029" />
 
     <TextView
-        android:id="@+id/textView14"
+        android:id="@+id/payUser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="**** **** *** 0123"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -86,14 +84,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.178"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView14"
+        app:layout_constraintTop_toBottomOf="@+id/payUser"
         app:layout_constraintVertical_bias="0.033" />
 
     <TextView
-        android:id="@+id/textView17"
+        android:id="@+id/emailUser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="usuario@gmail.com"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -114,7 +111,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView17"
+        app:layout_constraintTop_toBottomOf="@+id/emailUser"
         app:layout_constraintVertical_bias="0.111" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -38,8 +38,6 @@ class CartActivity:AppCompatActivity() {
     }
 
 
-
-
     fun getCartItem( ){
         val ref = FirebaseDatabase.getInstance().getReference("/cart/"+ UsuarioIDVariable)
         Log.e("Test", ref.toString())

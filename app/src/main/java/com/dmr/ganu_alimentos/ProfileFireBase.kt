@@ -3,6 +3,7 @@ package com.dmr.ganu_alimentos
 import android.content.ContentValues
 import android.util.Log
 import com.dmr.ganu_alimentos.model.Profile
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 
 class ProfileFireBase {
@@ -15,7 +16,7 @@ class ProfileFireBase {
     }
 
     fun addProfileInformation(profile: Profile){
-        val key = database.child("profile").push().key
+        val key = FirebaseAuth.getInstance().currentUser!!.uid
         profile.id = key
         database.child("profile").child(key!!).setValue(profile)
 
