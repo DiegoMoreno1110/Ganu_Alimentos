@@ -62,10 +62,10 @@ class ProductDetails: AppCompatActivity() {
 
             cartItem.id = ""
             cartItem.products = product
-            cartItem.quantity = 10
+            cartItem.quantity = itemCounter.text.toString().toInt()
 
             product.photoUrl = photoUrl
-            //product.price = price.toDouble()
+            product.price = 1250.00
             product.title = title
 
 
@@ -87,4 +87,7 @@ class ProductDetails: AppCompatActivity() {
 
 
     }
+
+
+
 }

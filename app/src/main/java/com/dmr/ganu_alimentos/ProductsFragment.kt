@@ -59,6 +59,7 @@ class ProductsFragment : Fragment() {
                     val product = it.getValue(Product::class.java)
                     products.add(product!!)
                 }
+
                 recycler_view.adapter = ProductsAdapter(products)
             }
         })

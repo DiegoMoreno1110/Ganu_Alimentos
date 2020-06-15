@@ -94,6 +94,7 @@ class SigninActivity : AppCompatActivity() {
         userMap["name"] = name
         userMap["password"] = password
 
+
         usersRef.child(currenUserId).setValue(userMap)
             .addOnCompleteListener { task ->
                 if(task.isSuccessful){

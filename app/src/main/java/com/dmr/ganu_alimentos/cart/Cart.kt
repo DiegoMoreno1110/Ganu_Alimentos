@@ -3,21 +3,27 @@ package com.dmr.ganu_alimentos.cart
 import android.content.ContentValues
 import android.util.Log
 import com.dmr.ganu_alimentos.model.CartItem
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.*
 
 class Cart {
 
     private lateinit var database: DatabaseReference
     private lateinit var key: String
+    private var firebaseUser: FirebaseUser? =  null
 
     constructor(){
         database = FirebaseDatabase.getInstance().reference
     }
 
     fun addCartItem(cartItem: CartItem){
-        val key = database.child("cart").push().key
+        //val key = database.child("cart").push().key
+        val key = FirebaseAuth.getInstance().currentUser!!.uid
         cartItem.id = key
-        database.child("cart").child(key!!).setValue(cartItem)
+        val itemList = database.child("cart").child(key!!).push()
+        itemList.setValue(cartItem)
+
 
     }
 
