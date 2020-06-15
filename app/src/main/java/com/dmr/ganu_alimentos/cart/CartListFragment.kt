@@ -27,7 +27,7 @@ class CartListFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         recyclerViewCart.apply {
             layoutManager = LinearLayoutManager(activity)
-            adapter = CartAdapter(mutableListOf<CartItem>())
+            //adapter = CartAdapter(mutableListOf<CartItem>())
         }
 
         cart.getCartItem()
