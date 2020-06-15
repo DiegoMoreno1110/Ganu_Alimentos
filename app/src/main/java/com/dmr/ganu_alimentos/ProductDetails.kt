@@ -40,7 +40,7 @@ class ProductDetails: AppCompatActivity() {
 
         lessCartItems.setOnClickListener {
             var currCount = itemCounter.text.toString().toInt()
-            if(currCount != 0){
+            if(currCount != 1){
                 currCount--
                 itemCounter.text = currCount.toString()
             }
