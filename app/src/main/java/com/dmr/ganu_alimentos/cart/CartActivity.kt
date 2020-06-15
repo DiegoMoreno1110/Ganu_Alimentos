@@ -35,6 +35,15 @@ class CartActivity:AppCompatActivity() {
 
         getCartItem()
 
+        var cart = Cart()
+        var cartItem = CartItem()
+
+
+        deleteCart.setOnClickListener {
+            Log.d("Boton eliminar recycler", "delete")
+            cart.deleteCartItem(cartItem)
+        }
+
     }
 
 

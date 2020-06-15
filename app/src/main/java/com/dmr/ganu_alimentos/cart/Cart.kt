@@ -28,8 +28,15 @@ class Cart {
     }
 
     fun deleteCartItem(cartItem: CartItem){
+
+        val key = FirebaseAuth.getInstance().currentUser!!.uid
+        database.child("cart").child(key!!).removeValue()
+
+        /*
         key = cartItem.id.toString()
         database.child("cart").child(key!!).removeValue()
+
+         */
     }
 
 

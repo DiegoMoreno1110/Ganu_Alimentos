@@ -25,6 +25,7 @@ class CartAdapter (private val cartItems: ArrayList<Product>): RecyclerView.Adap
 
 
         view.setOnClickListener {
+           
 
             /*
             val intent = Intent(parent.context, CartActivity::class.java)
