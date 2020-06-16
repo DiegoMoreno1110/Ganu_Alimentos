@@ -35,7 +35,7 @@ class ModifyInfo: AppCompatActivity() {
         modifyInfoProfileButton.setOnClickListener {
 
             profile.address = address.text.toString()
-            profile.card = card
+            //profile.card = card
             profile.email = email.text.toString()
             profile.password = password.text.toString()
             profile.id = ""

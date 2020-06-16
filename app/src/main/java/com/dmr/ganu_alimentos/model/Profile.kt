@@ -5,11 +5,11 @@ class Profile(
     var id: String? = null,
     var address: String? = null,
     var email: String? = null,
-    var password: String? = null,
-    var card: PayInfomation?
+    var password: String? = null//,
+    //var card: PayInfomation?
 ){
 
-    constructor() : this("","","","",null)
+    constructor() : this("","","","")//,null)
 
 
 

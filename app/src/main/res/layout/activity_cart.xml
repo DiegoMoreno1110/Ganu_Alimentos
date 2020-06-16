@@ -14,35 +14,18 @@
         tools:layout_editor_absoluteY="91dp" />
 
     <Button
-        android:id="@+id/deleteCart"
-        style="@android:style/Widget.Button"
-        android:layout_width="195dp"
-        android:layout_height="32dp"
-        android:layout_marginBottom="52dp"
-        android:background="@drawable/rounded_button_v1"
-        android:text="Borrar Carrito"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailUser"
-        app:layout_constraintVertical_bias="0.111" />
-
-    <Button
-        android:id="@+id/deleteCart2"
+        android:id="@+id/comprar"
         style="@android:style/Widget.Button"
         android:layout_width="307dp"
         android:layout_height="39dp"
+        android:layout_marginBottom="32dp"
         android:background="@drawable/rounded_button_v1"
         android:text="Comprar"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/deleteCart"
-        app:layout_constraintVertical_bias="0.491" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewCart"
@@ -61,23 +44,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Calculando..."
-        app:layout_constraintBottom_toTopOf="@+id/deleteCart"
+        app:layout_constraintBottom_toTopOf="@+id/comprar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.579"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recyclerViewCart"
-        app:layout_constraintVertical_bias="0.507" />
+        app:layout_constraintTop_toBottomOf="@+id/recyclerViewCart" />
 
     <TextView
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Total:"
-        app:layout_constraintBottom_toTopOf="@+id/deleteCart"
+        app:layout_constraintBottom_toTopOf="@+id/comprar"
         app:layout_constraintEnd_toStartOf="@+id/total"
         app:layout_constraintHorizontal_bias="0.834"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recyclerViewCart"
-        app:layout_constraintVertical_bias="0.507" />
+        app:layout_constraintTop_toBottomOf="@+id/recyclerViewCart" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

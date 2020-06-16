@@ -32,7 +32,7 @@ class ProductDetails: AppCompatActivity() {
 
         Picasso.get().load(photoUrl).error(R.drawable.ic_error_orange_24dp).placeholder(R.drawable.progress_animation).into(photo)
 
-        //product_name.text = title
+        product_name.text = title
 
         lessCartItems.setOnClickListener {
             var currCount = itemCounter.text.toString().toInt()

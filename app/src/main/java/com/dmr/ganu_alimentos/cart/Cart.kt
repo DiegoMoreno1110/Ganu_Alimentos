@@ -18,25 +18,20 @@ class Cart {
     }
 
     fun addCartItem(cartItem: CartItem){
-        //val key = database.child("cart").push().key
         val userID = FirebaseAuth.getInstance().currentUser!!.uid
         val itemList = database.child("cart").child(userID!!).push()
         cartItem.id = itemList.key
         itemList.setValue(cartItem)
-
-
     }
 
     fun deleteCartItem(cartItem: CartItem){
+        val key = FirebaseAuth.getInstance().currentUser!!.uid
+        database.child("cart").child(key!!).child(cartItem.id!!).removeValue()
+    }
 
+    fun deleteCart(){
         val key = FirebaseAuth.getInstance().currentUser!!.uid
         database.child("cart").child(key!!).removeValue()
-
-        /*
-        key = cartItem.id.toString()
-        database.child("cart").child(key!!).removeValue()
-
-         */
     }
 
 
