@@ -6,13 +6,52 @@
     android:layout_height="match_parent"
     android:background="#EDECEC">
 
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="116dp"
+        android:layout_height="126dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.125"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:layout_constraintVertical_bias="0.063"
+        app:srcCompat="@drawable/ganu_prod_image_1" />
+
     <TextView
-        android:padding="3dp"
+        android:id="@+id/textView4"
+        android:layout_width="245dp"
+        android:layout_height="83dp"
+        android:layout_marginStart="4dp"
+        android:text='"Ganu Sabor Carne de Res (caja con 45 piezas)"'
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView4"
+        app:layout_constraintTop_toBottomOf="@+id/textView19"
+        app:layout_constraintVertical_bias="0.088" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="186dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="380dp"
+        android:text="-\t$1250.00 MXN"
+        android:textColor="#FF5722"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView4" />
+
+    <TextView
         android:id="@+id/textView16"
         android:layout_width="match_parent"
         android:layout_height="36dp"
         android:background="@drawable/gradient_banner"
-        android:text="Pedido realizado el 01/03/2020"
+        android:padding="3dp"
+        android:text="Pedido realizado el 01/07/2020"
         android:textAlignment="center"
         android:textColor="#FF5722"
         android:textSize="20sp"
@@ -27,86 +66,74 @@
         android:layout_height="126dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.108"
+        app:layout_constraintHorizontal_bias="0.125"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView16"
-        app:layout_constraintVertical_bias="0.069"
+        app:layout_constraintVertical_bias="0.032"
         app:srcCompat="@drawable/ganu_prod_image_1" />
-
-    <TextView
-        android:id="@+id/textView18"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:text="Producto 1"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView4"
-        app:layout_constraintTop_toBottomOf="@+id/textView16"
-        app:layout_constraintVertical_bias="0.114" />
 
     <TextView
         android:id="@+id/textView19"
         android:layout_width="186dp"
         android:layout_height="28dp"
-        android:layout_marginStart="15dp"
-        android:text="-\t$1.00 MXN"
+        android:layout_marginStart="24dp"
+        android:text="-\t$1250.00 MXN"
         android:textColor="#FF5722"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView4"
         app:layout_constraintTop_toBottomOf="@+id/textView18"
-        app:layout_constraintVertical_bias="0.014" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/textView20"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:text="Total: "
-        android:textColor="@color/colorPrimary"
+        android:id="@+id/textView18"
+        android:layout_width="245dp"
+        android:layout_height="83dp"
+        android:layout_marginStart="4dp"
+        android:text='"Ganu Sabor Carne de Res (caja con 20 piezas)"'
+        android:textColor="@color/black"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4"
-        app:layout_constraintVertical_bias="0.057" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView4"
+        app:layout_constraintTop_toBottomOf="@+id/textView16"
+        app:layout_constraintVertical_bias="0.055" />
 
     <TextView
         android:id="@+id/textView21"
         android:layout_width="175dp"
         android:layout_height="30dp"
-        android:layout_marginStart="25dp"
+        android:layout_marginStart="32dp"
         android:background="@drawable/rounded_button_v1"
-        android:text="$2.00 MXN"
+        android:text="$2500.00 MXN"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView20"
         app:layout_constraintTop_toBottomOf="@+id/imageView4"
-        app:layout_constraintVertical_bias="0.048" />
+        app:layout_constraintVertical_bias="0.454" />
 
-    <Button
-        android:id="@+id/button3"
-        style="@android:style/Widget.Button"
-        android:layout_width="111dp"
-        android:layout_height="44dp"
-        android:layout_marginStart="16dp"
-        android:text="Cancelar"
-        android:textColor="@color/red500"
-        android:textSize="15sp"
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:text="Total: "
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView20"
-        app:layout_constraintVertical_bias="0.116" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:layout_constraintVertical_bias="0.46" />
 
     <Button
         android:id="@+id/button4"
         style="@android:style/Widget.Button"
         android:layout_width="191dp"
         android:layout_height="47dp"
-        android:layout_marginStart="30dp"
+        android:layout_marginStart="36dp"
         android:background="@drawable/rounded_button_v2"
         android:text="Volver a pedir"
         android:textColor="#FFFFFF"
@@ -114,5 +141,20 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button3"
         app:layout_constraintTop_toBottomOf="@+id/textView20"
-        app:layout_constraintVertical_bias="0.109" />
+        app:layout_constraintVertical_bias="0.152" />
+
+    <Button
+        android:id="@+id/button3"
+        style="@android:style/Widget.Button"
+        android:layout_width="111dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="56dp"
+        android:text="Cancelar"
+        android:textColor="@color/red500"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView20"
+        app:layout_constraintVertical_bias="0.165" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

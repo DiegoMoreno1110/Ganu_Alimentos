@@ -60,7 +60,7 @@
             android:padding="5dp"
             android:text="GANU ALIMENTOS es una empresa orgullosamente mexicana que busca proveer soluciones alimenticias a aquellas personas que disfrutan vivir un estilo de vida movido, saludable y moderno.\n\nS.A. de C.V."
             android:textAlignment="center"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@color/white"
             android:textSize="22sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

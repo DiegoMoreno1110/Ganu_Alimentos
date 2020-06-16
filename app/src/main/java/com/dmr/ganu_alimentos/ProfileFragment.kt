@@ -71,8 +71,8 @@ class ProfileFragment: Fragment() {
             override fun onDataChange(p0: DataSnapshot) {
                 if(p0.exists()){
                     val profile = p0.getValue<Profile>(Profile::class.java)
-                    addressUser.text = profile!!.address
-                    emailUser.text =  profile!!.email
+                    addressUser?.text = profile!!.address + " " + profile!!.email + " " +profile!!.password
+                    //emailUser.text =  profile!!.email
 
                 }
             }

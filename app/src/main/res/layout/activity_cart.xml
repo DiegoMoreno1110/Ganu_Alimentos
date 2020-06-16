@@ -16,9 +16,9 @@
     <Button
         android:id="@+id/deleteCart"
         style="@android:style/Widget.Button"
-        android:layout_width="331dp"
-        android:layout_height="52dp"
-        android:layout_marginBottom="16dp"
+        android:layout_width="195dp"
+        android:layout_height="32dp"
+        android:layout_marginBottom="112dp"
         android:background="@drawable/rounded_button_v1"
         android:text="Borrar Carrito"
         android:textColor="#FFFFFF"
@@ -29,6 +29,21 @@
         app:layout_constraintTop_toBottomOf="@+id/emailUser"
         app:layout_constraintVertical_bias="0.111" />
 
+    <Button
+        android:id="@+id/deleteCart2"
+        style="@android:style/Widget.Button"
+        android:layout_width="307dp"
+        android:layout_height="39dp"
+        android:background="@drawable/rounded_button_v1"
+        android:text="Comprar"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/deleteCart"
+        app:layout_constraintVertical_bias="0.375" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewCart"
         android:layout_width="380dp"
@@ -38,17 +53,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.483"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Carrito"
-        app:layout_constraintBottom_toBottomOf="@+id/include"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.108" />
+        app:layout_constraintTop_toTopOf="@+id/include"
+        app:layout_constraintVertical_bias="0.364" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

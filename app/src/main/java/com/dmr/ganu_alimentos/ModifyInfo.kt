@@ -6,6 +6,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -40,6 +41,7 @@ class ModifyInfo: AppCompatActivity() {
             profile.id = ""
 
             profileFireBase.addProfileInformation(profile)
+            Toast.makeText(this, "Personal information added", Toast.LENGTH_LONG).show()
         }
 
         modifyInfoCard.setOnClickListener {
@@ -50,6 +52,7 @@ class ModifyInfo: AppCompatActivity() {
             card.numberCard = numberCard.text.toString().toInt()
 
             payInformationFireBase.addPayInformation(card)
+            Toast.makeText(this, "Card's information added", Toast.LENGTH_LONG).show()
         }
 
 

@@ -3,6 +3,7 @@ package com.dmr.ganu_alimentos.cart
 import android.content.ContentValues
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import com.dmr.ganu_alimentos.ProductsAdapter
@@ -42,6 +43,7 @@ class CartActivity:AppCompatActivity() {
         deleteCart.setOnClickListener {
             Log.d("Boton eliminar recycler", "delete")
             cart.deleteCartItem(cartItem)
+            Toast.makeText(this, "Cart deleted", Toast.LENGTH_LONG).show()
         }
 
     }
