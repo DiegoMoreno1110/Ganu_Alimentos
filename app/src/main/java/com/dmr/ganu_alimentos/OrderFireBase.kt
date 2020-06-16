@@ -20,10 +20,13 @@ class OrderFireBase {
 
 
     fun addOrder(order: Order){
+        //val key = database.child("cart").push().key
         val userID = FirebaseAuth.getInstance().currentUser!!.uid
         val itemOrderList = database.child("order").child(userID!!).push()
         order.id = itemOrderList.key
         itemOrderList.setValue(order)
+
+
 
     }
 
