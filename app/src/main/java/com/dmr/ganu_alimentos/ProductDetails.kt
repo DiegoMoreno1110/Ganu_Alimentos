@@ -30,14 +30,9 @@ class ProductDetails: AppCompatActivity() {
         var photoUrl = intent.getStringExtra("photo_url")
         var price = intent.getStringExtra("price")
 
-        Picasso
-            .get()
-            .load(photoUrl)
-            .error(R.drawable.ic_error_orange_24dp)
-            .placeholder(R.drawable.progress_animation)
-            .into(photo)
+        Picasso.get().load(photoUrl).error(R.drawable.ic_error_orange_24dp).placeholder(R.drawable.progress_animation).into(photo)
 
-        product_name.text = title
+        //product_name.text = title
 
         lessCartItems.setOnClickListener {
             var currCount = itemCounter.text.toString().toInt()
@@ -68,7 +63,7 @@ class ProductDetails: AppCompatActivity() {
 
 
             product.photoUrl = photoUrl
-            product.price = 1250.00
+            product.price = price.toDouble()
             product.title = title
 
 

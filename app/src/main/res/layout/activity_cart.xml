@@ -18,7 +18,7 @@
         style="@android:style/Widget.Button"
         android:layout_width="195dp"
         android:layout_height="32dp"
-        android:layout_marginBottom="112dp"
+        android:layout_marginBottom="52dp"
         android:background="@drawable/rounded_button_v1"
         android:text="Borrar Carrito"
         android:textColor="#FFFFFF"
@@ -42,7 +42,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/deleteCart"
-        app:layout_constraintVertical_bias="0.375" />
+        app:layout_constraintVertical_bias="0.491" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewCart"
@@ -55,5 +55,29 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/include"
         app:layout_constraintVertical_bias="0.364" />
+
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculando..."
+        app:layout_constraintBottom_toTopOf="@+id/deleteCart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.579"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerViewCart"
+        app:layout_constraintVertical_bias="0.507" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total:"
+        app:layout_constraintBottom_toTopOf="@+id/deleteCart"
+        app:layout_constraintEnd_toStartOf="@+id/total"
+        app:layout_constraintHorizontal_bias="0.834"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerViewCart"
+        app:layout_constraintVertical_bias="0.507" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

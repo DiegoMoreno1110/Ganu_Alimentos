@@ -17,10 +17,13 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import kotlinx.android.synthetic.main.activity_cart.*
 import kotlinx.android.synthetic.main.app_bar.*
+import kotlinx.android.synthetic.main.fragment_carrito.*
 import kotlinx.android.synthetic.main.fragment_products.*
 
 class CartActivity:AppCompatActivity() {
     val UsuarioIDVariable:String  = FirebaseAuth.getInstance().currentUser!!.uid
+    var sumatoria:Double = 0.0
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cart)
@@ -31,10 +34,12 @@ class CartActivity:AppCompatActivity() {
 
         recyclerViewCart.apply {
             layoutManager = GridLayoutManager(this.context, 1)
-            adapter = CartAdapter(arrayListOf<Product>())
+            adapter = CartAdapter(arrayListOf())
         }
 
         getCartItem()
+
+
 
         var cart = Cart()
         var cartItem = CartItem()
@@ -55,13 +60,14 @@ class CartActivity:AppCompatActivity() {
         ref.addValueEventListener(object : ValueEventListener{
             override fun onCancelled(p0: DatabaseError){}
             override fun onDataChange(p0: DataSnapshot){
-                val products = arrayListOf<Product>()
+                val cartProducts = arrayListOf<CartItem>()
                 p0.children.forEach {
-                    //val product = it.getValue(Product::class.java)
-                    val product = it.child("products").getValue(Product::class.java)
-                    products.add(product!!)
+                    val cartItem = it.getValue(CartItem::class.java)
+                    sumatoria += cartItem!!.products!!.price!! * cartItem.quantity!!
+                    total.text = sumatoria.toString()
+                    cartProducts.add(cartItem!!)
                 }
-                recyclerViewCart.adapter = CartAdapter(products)
+                recyclerViewCart.adapter = CartAdapter(cartProducts)
             }
         })
     }

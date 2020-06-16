@@ -15,8 +15,7 @@ import com.dmr.ganu_alimentos.model.Product
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.cart_row.view.*
 
-class CartAdapter (private val cartItems: ArrayList<Product>): RecyclerView.Adapter<CartAdapter.ViewHolder>() {
-
+class CartAdapter (private val cartItems: ArrayList</*Product*/CartItem>): RecyclerView.Adapter<CartAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.cart_row, parent, false)
@@ -25,8 +24,6 @@ class CartAdapter (private val cartItems: ArrayList<Product>): RecyclerView.Adap
 
 
         view.setOnClickListener {
-
-
             /*
             val intent = Intent(parent.context, CartActivity::class.java)
             intent.putExtra("title", cartItems[holder.adapterPosition].title)
@@ -42,7 +39,8 @@ class CartAdapter (private val cartItems: ArrayList<Product>): RecyclerView.Adap
 
 
     override fun onBindViewHolder(holder: CartAdapter.ViewHolder, position: Int) {
-        val product = cartItems[position]
+        val product = cartItems[position].products!!
+        val cantidad = cartItems[position].quantity
         Picasso
             .get()
             .load(product.photoUrl)
@@ -53,8 +51,11 @@ class CartAdapter (private val cartItems: ArrayList<Product>): RecyclerView.Adap
         holder.title.text = product.title
         val priceWithSymbol = "$" + product.price.toString() + " MXN"
         holder.price.text =  priceWithSymbol
+        holder.quantity.text = cantidad.toString()
+        holder.delete.setOnClickListener(View.OnClickListener {
 
-        
+        })
+
     }
 
     override fun getItemCount(): Int = cartItems.size
@@ -64,6 +65,7 @@ class CartAdapter (private val cartItems: ArrayList<Product>): RecyclerView.Adap
         val title : TextView = itemView.title
         val price : TextView = itemView.price
         var quantity : TextView = itemView.quantity
+        var delete : TextView = itemView.delete
     }
 
 }

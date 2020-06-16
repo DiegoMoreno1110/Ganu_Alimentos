@@ -16,7 +16,6 @@ import kotlinx.android.synthetic.main.fragment_products.*
 import kotlinx.android.synthetic.main.fragment_products.view.*
 
 class ProductsFragment : Fragment() {
-    var total:Double = 0.0
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -30,7 +29,7 @@ class ProductsFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         recycler_view.apply {
             layoutManager = GridLayoutManager(activity, 2)
-            adapter = ProductsAdapter(arrayListOf<Product>())
+            adapter = ProductsAdapter(arrayListOf())
         }
         getProducts()
     }
@@ -58,10 +57,8 @@ class ProductsFragment : Fragment() {
                 val products = arrayListOf<Product>()
                 p0.children.forEach {
                     val product = it.getValue(Product::class.java)
-                    total += product!!.price!!
                     products.add(product!!)
                 }
-
                 recycler_view.adapter = ProductsAdapter(products)
             }
         })

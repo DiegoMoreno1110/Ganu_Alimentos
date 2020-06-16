@@ -19,9 +19,9 @@ class Cart {
 
     fun addCartItem(cartItem: CartItem){
         //val key = database.child("cart").push().key
-        val key = FirebaseAuth.getInstance().currentUser!!.uid
-        cartItem.id = key
-        val itemList = database.child("cart").child(key!!).push()
+        val userID = FirebaseAuth.getInstance().currentUser!!.uid
+        val itemList = database.child("cart").child(userID!!).push()
+        cartItem.id = itemList.key
         itemList.setValue(cartItem)
 
 
